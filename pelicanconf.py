@@ -8,6 +8,13 @@ SITEURL = ''
 PATH = 'content'
 
 THEME = 'pelican-themes/pelican-bootstrap3'
+# Theme variables
+DISPLAY_ARTICLE_INFO_ON_INDEX = True
+ABOUT_ME = 'Professional IT technophile'
+AVATAR = 'images/profile.jpeg'
+GITHUB_USER= 'dhjensen'
+GITHUB_SKIP_FORK = 'true'
+CC_LICENSE = 'CC-BY'
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
