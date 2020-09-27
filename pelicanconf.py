@@ -7,6 +7,13 @@ SITEURL = ''
 
 PATH = 'content'
 
+THEME = 'pelican-themes/pelican-bootstrap3'
+
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
+
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['i18n_subsites']
+
 TIMEZONE = 'Europe/Copenhagen'
 
 DEFAULT_LANG = 'en'
