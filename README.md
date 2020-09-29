@@ -1,11 +1,9 @@
 # dhjensen.dk
 
-I intend to replace <http://blog.dhjensen.dk/> and <http://www.daniboy.dk/> with this site
+I intend to replace `blogger` <http://blog.dhjensen.dk/> and google sites <http://www.daniboy.dk/> with a `pelican` static generated site.
 
-So I need to configure `blog` posts and an `about` page.
+The google site is replaced with `pelican` social links.
 
-I think the `about` page can be replaced by social media links.
+The `blogger` blog posts is imported using the `pelican` import feature.
 
-Need ssl support.
-
-Custom domain.
+SSL is supported using `let's encrypt` via `cloudflare` DNS and `netlify`.
