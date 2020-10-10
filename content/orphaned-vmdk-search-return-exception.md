@@ -1,12 +1,12 @@
-Title: Orphaned vmdk search return exception on large Datastores
+Title: Search for Orphaned vmdk files return exception on large Datastores
 Date: 2015-08-13 09:16
 Author: dhjensen
 Category: Blog
-Tags: VDI, View, ESXi, Datastore, Powershell, timeout, Vmware, ESXCLI, vCenter, PowerCLI
+Tags: VDI, View, ESXi, Datastore, Powershell, timeout, VMware, ESXCLI, vCenter, PowerCLI
 Slug: orphaned-vmdk-search-return-exception
 Status: published
 
-One of the challenges working with Vmware vcenter is keeping clean and healthy datastores. Making sure only vmdk files registered with active VMs is stored on Datastores is one example.  
+One of the challenges working with VMware vCenter is keeping clean and healthy datastores. Making sure only vmdk files registered with active VMs is stored on Datastores is one example.  
 For this purposes there are numerous scripts around that will compare the files of registered VMs with the actual list of vmdk files found in a Datastore  
 Examples:  
 
@@ -14,7 +14,7 @@ Examples:
 - <http://virtuallyjason.blogspot.dk/2013/08/orphaned-vmdk-files.html>
 - <http://www.lucd.info/2011/04/25/orphaned-files-and-folders-spring-cleaning/>
 
-There is however one problem no one seem to be able to address at all accross all these scripts. When you search "very" large datastores and the esxcli / powercli have been running for 15 minutes the script get an exception. (Our VDI linkedclone datastore is very large)  
+There is however one problem no one seem to be able to address at all across all these scripts. When you search "very" large datastores and the ESXCLI / PowerCLI have been running for 15 minutes the script get an exception. (Our VDI linked clone datastore is very large)  
 
 ```Powershell
 Exception calling "SearchDatastoreSubFolders" with "2" argument(s): "An error o
@@ -28,7 +28,7 @@ archSpec)
 
 I noticed the exception message was about the remote host so I figured it must be vCenter / ESXi related.  
   
-Based on above finding I found this [vmware KB article](http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1017253) that describe how to increase the timeout for tasks to vCenter and ESXCLI to much more than the default 15 minutes. I implemented the KB article on my vCenter server and on all the ESXi hosts in the cluster. This did the trick for me and I can now complete the datastore search. More specific I'm now able to complete this line of code from the scripts without the exception:  
+Based on above finding I found this [VMware KB article](http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1017253) that describe how to increase the timeout for tasks to vCenter and ESXCLI to much more than the default 15 minutes. I implemented the KB article on my vCenter server and on all the ESXi hosts in the cluster. This did the trick for me and I can now complete the datastore search. More specific I'm now able to complete this line of code from the scripts without the exception:  
 
 ```Powershell
 $xxx.SearchDatastoreSubFolders($rootPath, $searchSpec)
