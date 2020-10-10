@@ -1,0 +1,15 @@
+name: print_netlify_url
+on: [pull_request]
+jobs:
+  get-netlify-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Netlify
+        uses: JakePartusch/wait-for-netlify-action@v1.2
+        id: waitFor200
+        with:
+          site_name: "dhjensen"
+          max_timeout: 60
+      - name: Print netlify URL
+        id: print
+        run: echo ${{steps.waitFor200.outputs.url}}
