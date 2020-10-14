@@ -7,6 +7,10 @@ SITEURL = ''
 
 PATH = 'content'
 
+EXTRA_PATH_METADATA = { 
+  'images/favicon.ico': {'path': 'favicon.ico'} 
+}
+
 THEME = 'pelican-themes/pelican-bootstrap3'
 # Theme variables
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
