@@ -34,7 +34,7 @@ Based on above finding I found this [VMware KB article](http://kb.vmware.com/sel
 $xxx.SearchDatastoreSubFolders($rootPath, $searchSpec)
 ```
 
-I will not list my specific actions as they are covered in the KB article. However the article doesn't mention that the vpxa.cfg file is read only on the ESXi 5.5 host so you need to run the following to get write access  
+I will not list my specific actions as they are covered in the KB article. However the article doesn't mention that the `vpxa.cfg` file is read only on the ESXi 5.5 host so you need to run the following to get write access  
 
 ```bash
 chmod u+w /etc/vmware/vpxa/vpxa.cfg
