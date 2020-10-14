@@ -9,7 +9,7 @@ jobs:
         id: waitFor200
         with:
           site_name: "dhjensen"
-          max_timeout: 60
+          max_timeout: 240
       - name: Print netlify URL
         id: print
         run: echo ${{steps.waitFor200.outputs.url}}
