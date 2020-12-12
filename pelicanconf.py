@@ -14,7 +14,7 @@ EXTRA_PATH_METADATA = {
 THEME = 'pelican-themes/pelican-bootstrap3'
 # Theme variables
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
-ABOUT_ME = 'Professional IT technophile'
+ABOUT_ME = 'IT guy & gamer'
 AVATAR = 'images/profile.jpeg'
 GITHUB_USER= 'dhjensen'
 GITHUB_SKIP_FORK = 'true'
