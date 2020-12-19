@@ -13,3 +13,9 @@ jobs:
       - name: Print netlify URL
         id: print
         run: echo ${{steps.waitFor200.outputs.url}}
+      - name: Add Netlify URL as comment to pull request
+        id: addComment
+        uses: mshick/add-pr-comment@v1
+        with:
+          message: ${{steps.waitFor200.outputs.url}}
+          allow-repeats: true
