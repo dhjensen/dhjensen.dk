@@ -12,12 +12,12 @@ jobs:
           max_timeout: 240
       - name: Print netlify URL
         id: print
-        run: echo ${{steps.waitFor200.outputs.url}}
+        run: echo ${{ steps.waitFor200.outputs.url }}
       - name: Add Netlify URL as comment to pull request
         id: addComment
         uses: mshick/add-pr-comment@v1
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          message: ${{steps.waitFor200.outputs.url}}
+          message: ${{ steps.waitFor200.outputs.url }}
           allow-repeats: true
