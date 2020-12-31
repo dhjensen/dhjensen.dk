@@ -2,11 +2,13 @@
 
 I intend to replace `blogger` <http://blog.dhjensen.dk/> and google sites <http://www.daniboy.dk/> with a `pelican` static generated site.
 
-The google site is replaced with `pelican` social links.
+## Status
 
-The `blogger` blog posts is imported using the `pelican` import feature.
+`Pelican` social links replaces google site.
 
-SSL is supported using `let's encrypt` via `cloudflare` DNS and `netlify`.
+`Pelican` import feature imported the `blogger` blog posts.
+
+SSL is provided by `netlify's let's encrypt` implementation.
 
 ## favicon.ico
 
