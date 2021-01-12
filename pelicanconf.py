@@ -7,8 +7,11 @@ SITEURL = ''
 
 PATH = 'content'
 
-EXTRA_PATH_METADATA = { 
-  'images/favicon.ico': {'path': 'favicon.ico'} 
+STATIC_PATHS = ['extra/CNAME']
+
+EXTRA_PATH_METADATA = {
+  'images/favicon.ico': {'path': 'favicon.ico'},
+  'extra/CNAME': {'path': 'CNAME'},
 }
 
 THEME = 'pelican-themes/pelican-bootstrap3'
