@@ -11,3 +11,15 @@ I intend to replace `blogger` <http://blog.dhjensen.dk/> and google sites <http:
 ## favicon.ico
 
 Generated using <https://www.favicon-generator.org/>
+
+## Install / restore
+
+Clone it
+
+Add remote ghpages
+
+```bash
+git remote add ghpages git@github.com:dhjensen/dhjensen.github.io.git
+```
+
+Checkout 'ghpages/main' as branch 'gh-pages' to have history.
