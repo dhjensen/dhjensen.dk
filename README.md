@@ -23,3 +23,7 @@ git remote add ghpages git@github.com:dhjensen/dhjensen.github.io.git
 ```
 
 Checkout 'ghpages/main' as branch 'gh-pages' to have history.
+
+```bash
+git pull ghpages
+```
