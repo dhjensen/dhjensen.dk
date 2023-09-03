@@ -26,4 +26,5 @@ Checkout 'ghpages/main' as branch 'gh-pages' to have history.
 
 ```bash
 git pull ghpages
+git switch -c gh-pages ghpages/main
 ```
