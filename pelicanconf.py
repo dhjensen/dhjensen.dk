@@ -22,6 +22,9 @@ AVATAR = 'images/profile.jpeg'
 GITHUB_USER= 'dhjensen'
 GITHUB_SKIP_FORK = 'true'
 CC_LICENSE = 'CC-BY'
+PIWIK_URL = 'matomo.dhjensen.dk'
+PIWIK_SSL_URL = 'matomo.dhjensen.dk'
+PIWIK_SITE_ID = '1'
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
